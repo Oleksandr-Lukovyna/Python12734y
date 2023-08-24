@@ -1,0 +1,23 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Sample data
+data = {
+    'x': [2.5, 1.5, 3.0, 4.2, 2.8, 5.1, 6.0],
+    'y': [12, 9, 15, 18, 11, 20, 25],
+    'category': ['A', 'B', 'A', 'B', 'C', 'C', 'A']
+}
+
+# Create a DataFrame
+df = pd.DataFrame(data)
+
+# Create a scatter plot with a linear regression line
+sns.regplot(x='x', y='y', data=df)
+
+# Add labels and title
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Scatter Plot with Linear Regression Line')
+
+# Show the plot
+plt.show()
